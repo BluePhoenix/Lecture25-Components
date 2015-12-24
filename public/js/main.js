@@ -19017,8 +19017,28 @@ module.exports = validateDOMNesting;
 module.exports = require('./lib/React');
 
 },{"./lib/React":53}],159:[function(require,module,exports){
+var React = require('react');
+
+var InformationCell = React.createClass({
+  displayName: 'InformationCell',
+
+  render: function () {
+    return React.createElement(
+      'div',
+      null,
+      'Empty'
+    );
+  }
+});
+
+module.exports = InformationCell;
+
+},{"react":158}],160:[function(require,module,exports){
 // Main entry point for the application
 var React = require('react');
 var ReactDOM = require('react-dom');
+var InformationCell = require('./components/InformationCell.jsx');
 
-},{"react":158,"react-dom":29}]},{},[159]);
+ReactDOM.render(React.createElement(InformationCell, null), document.getElementById('goals'));
+
+},{"./components/InformationCell.jsx":159,"react":158,"react-dom":29}]},{},[160]);
