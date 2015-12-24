@@ -19099,11 +19099,55 @@ var InformationContainer = React.createClass({
 module.exports = InformationContainer;
 
 },{"./InformationCell.jsx":159,"react":158}],161:[function(require,module,exports){
+var React = require('react');
+var InformationCell = require('./InformationCell.jsx');
+
+var MetricsBanner = React.createClass({
+  displayName: 'MetricsBanner',
+
+  render: function () {
+    var containerStyle = {
+      marginTop: 16,
+      marginBottom: 16
+    };
+
+    return React.createElement(
+      'div',
+      { className: 'row', style: containerStyle },
+      React.createElement(
+        'div',
+        { className: 'col-sm-12' },
+        React.createElement(InformationCell, { mainContent: '1.5k', mainLabel: 'New visitors' })
+      ),
+      React.createElement(
+        'div',
+        { className: 'col-sm-12' },
+        React.createElement(InformationCell, { mainContent: '50%', mainLabel: 'Bounce Rate' })
+      ),
+      React.createElement(
+        'div',
+        { className: 'col-sm-12' },
+        React.createElement(InformationCell, { mainContent: '28%', mainLabel: 'Searches' })
+      ),
+      React.createElement(
+        'div',
+        { className: 'col-sm-12' },
+        React.createElement(InformationCell, { mainContent: '140.5 kb', mainLabel: 'Traffic' })
+      )
+    );
+  }
+});
+
+module.exports = MetricsBanner;
+
+},{"./InformationCell.jsx":159,"react":158}],162:[function(require,module,exports){
 // Main entry point for the application
 var React = require('react');
 var ReactDOM = require('react-dom');
 var InformationContainer = require('./components/InformationContainer.jsx');
+var MetricsBanner = require('./components/MetricsBanner.jsx');
 
 ReactDOM.render(React.createElement(InformationContainer, null), document.getElementById('goals'));
+ReactDOM.render(React.createElement(MetricsBanner, null), document.getElementById('metrics'));
 
-},{"./components/InformationContainer.jsx":160,"react":158,"react-dom":29}]},{},[161]);
+},{"./components/InformationContainer.jsx":160,"./components/MetricsBanner.jsx":161,"react":158,"react-dom":29}]},{},[162]);

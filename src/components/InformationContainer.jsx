@@ -7,7 +7,7 @@ var InformationContainer = React.createClass({
       marginTop: 16,
       marginBottom: 16
     }
-    
+
     return (
       <div style={containerStyle}>
         <div className="col-sm-4">
