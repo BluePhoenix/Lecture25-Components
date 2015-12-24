@@ -12,7 +12,7 @@ var InformationCell = React.createClass({
       fontWeight: "bold"
     }
 
-    var mainLabelStyle = {
+    var bottomLabelStyle = {
       color: "#8e8e8e"
     }
 
@@ -20,7 +20,7 @@ var InformationCell = React.createClass({
       <div className="panel" style={contentStyle}>
         <div className="panel-heading">
           <div className="row" style={mainContentStyle}>{this.props.mainContent}</div>
-          <div className="row" style={mainLabelStyle}>{this.props.mainLabel}</div>
+          <div className="row" style={bottomLabelStyle}>{this.props.bottomLabel}</div>
         </div>
         <div className="panel-body"></div>
       </div>

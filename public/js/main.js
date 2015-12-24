@@ -19033,7 +19033,7 @@ var InformationCell = React.createClass({
       fontWeight: "bold"
     };
 
-    var mainLabelStyle = {
+    var bottomLabelStyle = {
       color: "#8e8e8e"
     };
 
@@ -19050,8 +19050,8 @@ var InformationCell = React.createClass({
         ),
         React.createElement(
           "div",
-          { className: "row", style: mainLabelStyle },
-          this.props.mainLabel
+          { className: "row", style: bottomLabelStyle },
+          this.props.bottomLabel
         )
       ),
       React.createElement("div", { className: "panel-body" })
@@ -19080,17 +19080,17 @@ var InformationContainer = React.createClass({
       React.createElement(
         'div',
         { className: 'col-sm-4' },
-        React.createElement(InformationCell, { mainContent: '20', mainLabel: 'New followers added this month' })
+        React.createElement(InformationCell, { mainContent: '20', bottomLabel: 'New followers added this month' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-4' },
-        React.createElement(InformationCell, { mainContent: '$ 1250', mainLabel: 'Average monthly income' })
+        React.createElement(InformationCell, { mainContent: '$ 1250', bottomLabel: 'Average monthly income' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-4' },
-        React.createElement(InformationCell, { mainContent: '$ 13865', mainLabel: 'Yearly Income Goal' })
+        React.createElement(InformationCell, { mainContent: '$ 13865', bottomLabel: 'Yearly Income Goal' })
       )
     );
   }
@@ -19117,22 +19117,22 @@ var MetricsBanner = React.createClass({
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '1.5k', mainLabel: 'New visitors' })
+        React.createElement(InformationCell, { mainContent: '1.5k', bottomLabel: 'New visitors' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '50%', mainLabel: 'Bounce Rate' })
+        React.createElement(InformationCell, { mainContent: '50%', bottomLabel: 'Bounce Rate' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '28%', mainLabel: 'Searches' })
+        React.createElement(InformationCell, { mainContent: '28%', bottomLabel: 'Searches' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '140.5 kb', mainLabel: 'Traffic' })
+        React.createElement(InformationCell, { mainContent: '140.5 kb', bottomLabel: 'Traffic' })
       )
     );
   }

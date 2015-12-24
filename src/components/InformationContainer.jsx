@@ -11,13 +11,13 @@ var InformationContainer = React.createClass({
     return (
       <div style={containerStyle}>
         <div className="col-sm-4">
-          <InformationCell mainContent="20" mainLabel="New followers added this month" />
+          <InformationCell mainContent="20" bottomLabel="New followers added this month" />
         </div>
         <div className="col-sm-4">
-          <InformationCell mainContent="$ 1250" mainLabel="Average monthly income" />
+          <InformationCell mainContent="$ 1250" bottomLabel="Average monthly income" />
         </div>
         <div className="col-sm-4">
-          <InformationCell mainContent="$ 13865" mainLabel="Yearly Income Goal" />
+          <InformationCell mainContent="$ 13865" bottomLabel="Yearly Income Goal" />
         </div>
       </div>
     );
