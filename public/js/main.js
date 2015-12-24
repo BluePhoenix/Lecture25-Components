@@ -19166,17 +19166,25 @@ var PostData = React.createClass({
   displayName: "PostData",
 
   render: function () {
+    var mainContentStyle = {
+      fontSize: "1.5em"
+    };
+
+    var bottomLabelStyle = {
+      opacity: 0.8
+    };
+
     return React.createElement(
       "div",
       { className: "text-center" },
       React.createElement(
         "div",
-        { className: "row" },
+        { className: "row", style: mainContentStyle },
         this.props.mainContent
       ),
       React.createElement(
         "div",
-        { className: "row" },
+        { className: "row", style: bottomLabelStyle },
         this.props.bottomLabel
       )
     );
@@ -19193,6 +19201,11 @@ var PostOverview = React.createClass({
   displayName: 'PostOverview',
 
   render: function () {
+    var footerStyle = {
+      color: "#FFFFFF",
+      background: "#525757"
+    };
+
     return React.createElement(
       'div',
       { className: 'col-sm-12' },
@@ -19202,7 +19215,7 @@ var PostOverview = React.createClass({
         React.createElement('div', { className: 'panel-body' }),
         React.createElement(
           'div',
-          { className: 'panel-footer' },
+          { className: 'panel-footer', style: footerStyle },
           React.createElement(
             'div',
             { className: 'row' },
