@@ -19023,30 +19023,40 @@ var InformationCell = React.createClass({
   displayName: "InformationCell",
 
   render: function () {
-    var contentStyle = {
-      padding: 8
-    };
+    var headingStyle = {};
 
     var topLabelStyle = {
-      color: "#AAAAAA"
+      color: "#AAAAAA",
+      paddingLeft: 10,
+      paddingRight: 10
     };
 
     var mainContentStyle = {
       color: "#5e5e5e",
-      fontSize: "1.4em",
-      fontWeight: "bold"
+      fontSize: "1.5em",
+      fontWeight: "bold",
+      paddingLeft: 10,
+      paddingRight: 10
     };
 
     var bottomLabelStyle = {
-      color: "#8e8e8e"
+      color: "#8e8e8e",
+      paddingLeft: 10,
+      paddingRight: 10
+    };
+
+    if (this.props.headingColor) {
+      headingStyle.background = this.props.headingColor;
+      mainContentStyle.color = "#FFFFFF";
+      topLabelStyle.color = "#FFFFFF";
     };
 
     return React.createElement(
       "div",
-      { className: "panel", style: contentStyle },
+      { className: "panel" },
       React.createElement(
         "div",
-        { className: "panel-heading" },
+        { className: "panel-heading", style: headingStyle },
         React.createElement(
           "div",
           { className: "row", style: topLabelStyle },
@@ -19126,22 +19136,22 @@ var MetricsBanner = React.createClass({
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '1.5k', topLabel: 'New visitors' })
+        React.createElement(InformationCell, { headingColor: '#029ED4', mainContent: '1.5k', topLabel: 'New visitors' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '50%', topLabel: 'Bounce Rate' })
+        React.createElement(InformationCell, { headingColor: '#BB95DB', mainContent: '50%', topLabel: 'Bounce Rate' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '28%', topLabel: 'Searches' })
+        React.createElement(InformationCell, { headingColor: '#FF522B', mainContent: '28%', topLabel: 'Searches' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '140.5 kb', topLabel: 'Traffic' })
+        React.createElement(InformationCell, { headingColor: '#6EC95E', mainContent: '140.5 kb', topLabel: 'Traffic' })
       )
     );
   }
