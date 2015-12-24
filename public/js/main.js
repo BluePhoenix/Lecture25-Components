@@ -19047,11 +19047,48 @@ var InformationCell = React.createClass({
 module.exports = InformationCell;
 
 },{"react":158}],160:[function(require,module,exports){
+var React = require('react');
+var InformationCell = require('./InformationCell.jsx');
+
+var InformationContainer = React.createClass({
+  displayName: 'InformationContainer',
+
+  render: function () {
+    var containerStyle = {
+      marginTop: 16,
+      marginBottom: 16
+    };
+
+    return React.createElement(
+      'div',
+      { style: containerStyle },
+      React.createElement(
+        'div',
+        { className: 'col-sm-4' },
+        React.createElement(InformationCell, { mainContent: '20', mainLabel: 'New followers added this month' })
+      ),
+      React.createElement(
+        'div',
+        { className: 'col-sm-4' },
+        React.createElement(InformationCell, { mainContent: '$ 1250', mainLabel: 'Average monthly income' })
+      ),
+      React.createElement(
+        'div',
+        { className: 'col-sm-4' },
+        React.createElement(InformationCell, { mainContent: '$ 13865', mainLabel: 'Yearly Income Goal' })
+      )
+    );
+  }
+});
+
+module.exports = InformationContainer;
+
+},{"./InformationCell.jsx":159,"react":158}],161:[function(require,module,exports){
 // Main entry point for the application
 var React = require('react');
 var ReactDOM = require('react-dom');
-var InformationCell = require('./components/InformationCell.jsx');
+var InformationContainer = require('./components/InformationContainer.jsx');
 
-ReactDOM.render(React.createElement(InformationCell, { mainContent: '20', mainLabel: 'New followers added this month' }), document.getElementById('goals'));
+ReactDOM.render(React.createElement(InformationContainer, null), document.getElementById('goals'));
 
-},{"./components/InformationCell.jsx":159,"react":158,"react-dom":29}]},{},[160]);
+},{"./components/InformationContainer.jsx":160,"react":158,"react-dom":29}]},{},[161]);
