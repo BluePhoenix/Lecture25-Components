@@ -19042,7 +19042,7 @@ var InformationCell = React.createClass({
       { className: "panel", style: contentStyle },
       React.createElement(
         "div",
-        { className: "panel-body" },
+        { className: "panel-heading" },
         React.createElement(
           "div",
           { className: "row", style: mainContentStyle },
@@ -19053,7 +19053,8 @@ var InformationCell = React.createClass({
           { className: "row", style: mainLabelStyle },
           this.props.mainLabel
         )
-      )
+      ),
+      React.createElement("div", { className: "panel-body" })
     );
   }
 });
