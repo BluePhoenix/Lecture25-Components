@@ -19162,21 +19162,66 @@ module.exports = MetricsBanner;
 },{"./InformationCell.jsx":159,"react":158}],162:[function(require,module,exports){
 var React = require('react');
 
-var PostOverview = React.createClass({
-  displayName: "PostOverview",
+var PostData = React.createClass({
+  displayName: "PostData",
 
   render: function () {
     return React.createElement(
       "div",
-      { className: "col-sm-12" },
+      { className: "text-center" },
       React.createElement(
         "div",
-        { className: "panel" },
-        React.createElement("div", { className: "panel-body" }),
+        { className: "row" },
+        this.props.mainContent
+      ),
+      React.createElement(
+        "div",
+        { className: "row" },
+        this.props.bottomLabel
+      )
+    );
+  }
+});
+
+module.exports = PostData;
+
+},{"react":158}],163:[function(require,module,exports){
+var React = require('react');
+var PostData = require('./PostData.jsx');
+
+var PostOverview = React.createClass({
+  displayName: 'PostOverview',
+
+  render: function () {
+    return React.createElement(
+      'div',
+      { className: 'col-sm-12' },
+      React.createElement(
+        'div',
+        { className: 'panel' },
+        React.createElement('div', { className: 'panel-body' }),
         React.createElement(
-          "div",
-          { className: "panel-footer" },
-          "Test"
+          'div',
+          { className: 'panel-footer' },
+          React.createElement(
+            'div',
+            { className: 'row' },
+            React.createElement(
+              'div',
+              { className: 'col-sm-4' },
+              React.createElement(PostData, { mainContent: '15080', bottomLabel: 'Shot Views' })
+            ),
+            React.createElement(
+              'div',
+              { className: 'col-sm-4' },
+              React.createElement(PostData, { mainContent: '12000', bottomLabel: 'Likes' })
+            ),
+            React.createElement(
+              'div',
+              { className: 'col-sm-4' },
+              React.createElement(PostData, { mainContent: '5100', bottomLabel: 'Comments' })
+            )
+          )
         )
       )
     );
@@ -19185,7 +19230,7 @@ var PostOverview = React.createClass({
 
 module.exports = PostOverview;
 
-},{"react":158}],163:[function(require,module,exports){
+},{"./PostData.jsx":162,"react":158}],164:[function(require,module,exports){
 // Main entry point for the application
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -19198,4 +19243,4 @@ ReactDOM.render(React.createElement(MetricsBanner, null), document.getElementByI
 ReactDOM.render(React.createElement(PostOverview, null), document.getElementById('post-1'));
 ReactDOM.render(React.createElement(PostOverview, null), document.getElementById('post-2'));
 
-},{"./components/InformationContainer.jsx":160,"./components/MetricsBanner.jsx":161,"./components/PostOverview.jsx":162,"react":158,"react-dom":29}]},{},[163]);
+},{"./components/InformationContainer.jsx":160,"./components/MetricsBanner.jsx":161,"./components/PostOverview.jsx":163,"react":158,"react-dom":29}]},{},[164]);
