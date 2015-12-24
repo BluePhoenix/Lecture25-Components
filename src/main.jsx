@@ -7,5 +7,5 @@ var PostOverview = require('./components/PostOverview.jsx')
 
 ReactDOM.render(<InformationContainer />, document.getElementById('goals'));
 ReactDOM.render(<MetricsBanner />, document.getElementById('metrics'));
-ReactDOM.render(<PostOverview />, document.getElementById('post-1'));
-ReactDOM.render(<PostOverview />, document.getElementById('post-2'));
+ReactDOM.render(<PostOverview postBackground="#02A0D6" />, document.getElementById('post-1'));
+ReactDOM.render(<PostOverview postBackground="#D364B7" />, document.getElementById('post-2'));

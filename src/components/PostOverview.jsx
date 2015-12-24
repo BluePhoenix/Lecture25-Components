@@ -8,10 +8,18 @@ var PostOverview = React.createClass({
       background: "#525757"
     };
 
+    var postStyle = {
+      minHeight: 80
+    };
+
+    if (this.props.postBackground) {
+      postStyle.background = this.props.postBackground;
+    };
+
     return (
       <div className="col-sm-12">
         <div className="panel">
-          <div className="panel-body">
+          <div className="panel-heading" style={postStyle}>
           </div>
           <div className="panel-footer" style={footerStyle}>
             <div className="row">

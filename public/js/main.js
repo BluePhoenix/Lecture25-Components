@@ -19206,13 +19206,21 @@ var PostOverview = React.createClass({
       background: "#525757"
     };
 
+    var postStyle = {
+      minHeight: 80
+    };
+
+    if (this.props.postBackground) {
+      postStyle.background = this.props.postBackground;
+    };
+
     return React.createElement(
       'div',
       { className: 'col-sm-12' },
       React.createElement(
         'div',
         { className: 'panel' },
-        React.createElement('div', { className: 'panel-body' }),
+        React.createElement('div', { className: 'panel-heading', style: postStyle }),
         React.createElement(
           'div',
           { className: 'panel-footer', style: footerStyle },
@@ -19253,7 +19261,7 @@ var PostOverview = require('./components/PostOverview.jsx');
 
 ReactDOM.render(React.createElement(InformationContainer, null), document.getElementById('goals'));
 ReactDOM.render(React.createElement(MetricsBanner, null), document.getElementById('metrics'));
-ReactDOM.render(React.createElement(PostOverview, null), document.getElementById('post-1'));
-ReactDOM.render(React.createElement(PostOverview, null), document.getElementById('post-2'));
+ReactDOM.render(React.createElement(PostOverview, { postBackground: '#02A0D6' }), document.getElementById('post-1'));
+ReactDOM.render(React.createElement(PostOverview, { postBackground: '#D364B7' }), document.getElementById('post-2'));
 
 },{"./components/InformationContainer.jsx":160,"./components/MetricsBanner.jsx":161,"./components/PostOverview.jsx":163,"react":158,"react-dom":29}]},{},[164]);
