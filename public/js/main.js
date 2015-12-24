@@ -19160,13 +19160,42 @@ var MetricsBanner = React.createClass({
 module.exports = MetricsBanner;
 
 },{"./InformationCell.jsx":159,"react":158}],162:[function(require,module,exports){
+var React = require('react');
+
+var PostOverview = React.createClass({
+  displayName: "PostOverview",
+
+  render: function () {
+    return React.createElement(
+      "div",
+      { className: "col-sm-12" },
+      React.createElement(
+        "div",
+        { className: "panel" },
+        React.createElement("div", { className: "panel-body" }),
+        React.createElement(
+          "div",
+          { className: "panel-footer" },
+          "Test"
+        )
+      )
+    );
+  }
+});
+
+module.exports = PostOverview;
+
+},{"react":158}],163:[function(require,module,exports){
 // Main entry point for the application
 var React = require('react');
 var ReactDOM = require('react-dom');
 var InformationContainer = require('./components/InformationContainer.jsx');
 var MetricsBanner = require('./components/MetricsBanner.jsx');
+var PostOverview = require('./components/PostOverview.jsx');
 
 ReactDOM.render(React.createElement(InformationContainer, null), document.getElementById('goals'));
 ReactDOM.render(React.createElement(MetricsBanner, null), document.getElementById('metrics'));
+ReactDOM.render(React.createElement(PostOverview, null), document.getElementById('post-1'));
+ReactDOM.render(React.createElement(PostOverview, null), document.getElementById('post-2'));
 
-},{"./components/InformationContainer.jsx":160,"./components/MetricsBanner.jsx":161,"react":158,"react-dom":29}]},{},[162]);
+},{"./components/InformationContainer.jsx":160,"./components/MetricsBanner.jsx":161,"./components/PostOverview.jsx":162,"react":158,"react-dom":29}]},{},[163]);
