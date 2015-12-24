@@ -19027,6 +19027,10 @@ var InformationCell = React.createClass({
       padding: 8
     };
 
+    var topLabelStyle = {
+      color: "#AAAAAA"
+    };
+
     var mainContentStyle = {
       color: "#5e5e5e",
       fontSize: "1.4em",
@@ -19043,6 +19047,11 @@ var InformationCell = React.createClass({
       React.createElement(
         "div",
         { className: "panel-heading" },
+        React.createElement(
+          "div",
+          { className: "row", style: topLabelStyle },
+          this.props.topLabel
+        ),
         React.createElement(
           "div",
           { className: "row", style: mainContentStyle },
@@ -19117,22 +19126,22 @@ var MetricsBanner = React.createClass({
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '1.5k', bottomLabel: 'New visitors' })
+        React.createElement(InformationCell, { mainContent: '1.5k', topLabel: 'New visitors' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '50%', bottomLabel: 'Bounce Rate' })
+        React.createElement(InformationCell, { mainContent: '50%', topLabel: 'Bounce Rate' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '28%', bottomLabel: 'Searches' })
+        React.createElement(InformationCell, { mainContent: '28%', topLabel: 'Searches' })
       ),
       React.createElement(
         'div',
         { className: 'col-sm-12' },
-        React.createElement(InformationCell, { mainContent: '140.5 kb', bottomLabel: 'Traffic' })
+        React.createElement(InformationCell, { mainContent: '140.5 kb', topLabel: 'Traffic' })
       )
     );
   }

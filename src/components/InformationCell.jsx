@@ -6,6 +6,10 @@ var InformationCell = React.createClass({
       padding: 8
     }
 
+    var topLabelStyle = {
+      color: "#AAAAAA"
+    }
+
     var mainContentStyle = {
       color: "#5e5e5e",
       fontSize: "1.4em",
@@ -19,6 +23,7 @@ var InformationCell = React.createClass({
     return (
       <div className="panel" style={contentStyle}>
         <div className="panel-heading">
+          <div className="row" style={topLabelStyle}>{this.props.topLabel}</div>
           <div className="row" style={mainContentStyle}>{this.props.mainContent}</div>
           <div className="row" style={bottomLabelStyle}>{this.props.bottomLabel}</div>
         </div>
