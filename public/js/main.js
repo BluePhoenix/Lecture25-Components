@@ -19020,13 +19020,26 @@ module.exports = require('./lib/React');
 var React = require('react');
 
 var InformationCell = React.createClass({
-  displayName: 'InformationCell',
+  displayName: "InformationCell",
 
   render: function () {
     return React.createElement(
-      'div',
-      null,
-      'Empty'
+      "div",
+      { className: "panel" },
+      React.createElement(
+        "div",
+        { className: "panel-body" },
+        React.createElement(
+          "div",
+          { className: "row" },
+          this.props.mainContent
+        ),
+        React.createElement(
+          "div",
+          { className: "row" },
+          this.props.mainLabel
+        )
+      )
     );
   }
 });
@@ -19039,6 +19052,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var InformationCell = require('./components/InformationCell.jsx');
 
-ReactDOM.render(React.createElement(InformationCell, null), document.getElementById('goals'));
+ReactDOM.render(React.createElement(InformationCell, { mainContent: '20', mainLabel: 'New followers added this month' }), document.getElementById('goals'));
 
 },{"./components/InformationCell.jsx":159,"react":158,"react-dom":29}]},{},[160]);
