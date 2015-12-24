@@ -19023,20 +19023,34 @@ var InformationCell = React.createClass({
   displayName: "InformationCell",
 
   render: function () {
+    var contentStyle = {
+      padding: 8
+    };
+
+    var mainContentStyle = {
+      color: "#5e5e5e",
+      fontSize: "1.4em",
+      fontWeight: "bold"
+    };
+
+    var mainLabelStyle = {
+      color: "#8e8e8e"
+    };
+
     return React.createElement(
       "div",
-      { className: "panel" },
+      { className: "panel", style: contentStyle },
       React.createElement(
         "div",
         { className: "panel-body" },
         React.createElement(
           "div",
-          { className: "row" },
+          { className: "row", style: mainContentStyle },
           this.props.mainContent
         ),
         React.createElement(
           "div",
-          { className: "row" },
+          { className: "row", style: mainLabelStyle },
           this.props.mainLabel
         )
       )
