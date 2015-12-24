@@ -12,8 +12,8 @@ var PostData = React.createClass({
 
     return (
       <div className="text-center">
-        <div className="row" style={mainContentStyle}>{this.props.mainContent}</div>
-        <div className="row" style={bottomLabelStyle}>{this.props.bottomLabel}</div>
+        <div className="" style={mainContentStyle}>{this.props.mainContent}</div>
+        <div className="" style={bottomLabelStyle}>{this.props.bottomLabel}</div>
       </div>
     );
   }

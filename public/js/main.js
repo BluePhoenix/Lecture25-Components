@@ -19179,12 +19179,12 @@ var PostData = React.createClass({
       { className: "text-center" },
       React.createElement(
         "div",
-        { className: "row", style: mainContentStyle },
+        { className: "", style: mainContentStyle },
         this.props.mainContent
       ),
       React.createElement(
         "div",
-        { className: "row", style: bottomLabelStyle },
+        { className: "", style: bottomLabelStyle },
         this.props.bottomLabel
       )
     );
